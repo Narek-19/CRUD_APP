@@ -1,0 +1,7 @@
+.CreatePost input{
+    width:450px;
+    padding:5px;
+    outline: none;
+    background: linear-gradient(180deg, rgba(249,243,223,1) 14%, rgba(205,242,202,0.8687850140056023) 48%, rgba(249,243,223,1) 100%);
+
+}
