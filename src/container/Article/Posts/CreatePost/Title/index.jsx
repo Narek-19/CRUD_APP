@@ -1,10 +1,10 @@
 import React,{useState} from "react";
-import "./style.css";
+import style from "./style.module.css";
 import { connect } from "react-redux";
 import {createPost} from '../../../../../redux/actions/action'
-import { randomId } from "./helper";
+import { randomId } from "../helper";
 
-const CreatePost = (props) => {
+const Title = (props) => {
   const [post, setPost] = useState("");
 
   const { createPost } = props;
@@ -18,11 +18,11 @@ const CreatePost = (props) => {
     createPost(post,id);
   };
   return (
-    <div className="CreatePost">
+    <div className={style.Title}>
       <form onSubmit={handlePost}>
-        <input placeholder="Add Post" onChange = {handleChange}/>
+        <input placeholder="Add Title" onChange = {handleChange}/>
       </form>
     </div>
   );
 };
-export default connect(null, { createPost })(CreatePost);
+export default connect(null, { createPost })(Title);

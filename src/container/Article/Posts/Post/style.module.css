@@ -2,7 +2,7 @@
     padding:5px;
     margin:2px 0;
 }
-.Post #title{
+.title{
     font-size: 20px;
     cursor: pointer;
     white-space: nowrap; 
@@ -11,4 +11,7 @@
     width: 450px;
     padding: 5px;
     background: linear-gradient(180deg, rgba(249,243,223,1) 14%, rgba(205,242,202,0.8687850140056023) 48%, rgba(249,243,223,1) 100%);
+}
+.title:hover{
+    background-color: green;
 }

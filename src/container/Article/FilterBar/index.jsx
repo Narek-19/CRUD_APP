@@ -1,9 +1,9 @@
 import React from "react";
-import './style.css';
+import style from "./style.module.css";
 
 export const FilterBar = () => {
     return(
-        <div className = "FilterBar">
+        <div className = {style.FilterBar}>
             <p>Filter</p>
         </div>
     )

@@ -1,12 +1,14 @@
 import React from "react";
-import './style.css';
+import Post from "./Post";
+import style from "./style.module.css";
 
-const PostInfoBar = (props) => {
-    return (
-        <div className="PostInfoBar">
-            <p>PostInfoBar</p>
-        </div>
-    )
-}
+export const PostInfoBar = () => {
 
-export default PostInfoBar;
+  return (
+    <div className={style.PostInfoBar}>
+      <h1>Post Info</h1>
+      <Post/>
+    </div>
+  );
+};
+

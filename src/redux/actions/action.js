@@ -10,13 +10,11 @@ export const getPosts = () => {
 };
 
 export const createPost = (post,id) => {
-  console.log(id);
     return async (dispatch) => {
     const response = await fetch("http://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: JSON.stringify({
         title:post,
-        postId:id
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -25,7 +23,18 @@ export const createPost = (post,id) => {
     const jsonData = await response.json();
     dispatch({
       type: "CREATE_POST",
-      payload: jsonData,
+      payload: {...jsonData,id:id},
     });
   };
 };
+
+export const getPost = (post) => {
+  return async (dispatch) => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}`)
+    const jsonData = await response.json();
+    dispatch({
+      type: "GET_POST",
+      payload: {...jsonData, id:post.id,title:post.title},
+    }); 
+  }
+}
