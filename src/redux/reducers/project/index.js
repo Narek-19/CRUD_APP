@@ -1,3 +1,4 @@
+import { deletePost } from "./producer";
 import { createPost } from "./producer";
 import { getPosts } from "./producer";
 
@@ -5,7 +6,7 @@ import { getPosts } from "./producer";
 const initialState = {
   posts: [],
 };
-
+ 
 const project = (state = initialState, action) => {
   console.log("action>>", action.payload);
 
@@ -14,6 +15,8 @@ const project = (state = initialState, action) => {
       return getPosts(state, action);
     case "CREATE_POST":
       return createPost(state,action);
+    case "DELETE_POST":
+      return deletePost(state,action);
     default:
       return state;
   }

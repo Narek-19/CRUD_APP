@@ -1,5 +1,9 @@
 .PostInfoBar{
-    width:40%;
+    width:30%;
     padding:5px;
     background-color:#F9F3DF;
+}
+.PostInfoBar h1{
+    text-align: center;
+    color: burlywood;
 }

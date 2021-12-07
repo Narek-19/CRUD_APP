@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {createPost} from '../../../../../redux/actions/action'
 import { randomId } from "../helper";
 
-const Title = (props) => {
+const Post = (props) => {
   const [post, setPost] = useState("");
 
   const { createPost } = props;
@@ -18,11 +18,11 @@ const Title = (props) => {
     createPost(post,id);
   };
   return (
-    <div className={style.Title}>
+    <div className={style.Post}>
       <form onSubmit={handlePost}>
-        <input placeholder="Add Title" onChange = {handleChange}/>
+        <input placeholder="Add Post" onChange = {handleChange}/>
       </form>
     </div>
   );
 };
-export default connect(null, { createPost })(Title);
+export default connect(null, { createPost })(Post);

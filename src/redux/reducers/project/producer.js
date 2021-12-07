@@ -16,3 +16,9 @@ export const createPost = (state,action) => {
   return stateClone; 
 }
 
+export const deletePost = (state,action) => {
+  const stateClone = {...state};
+  const updatedArray = state.posts.filter((res) => res.id !== action.payload );
+  stateClone.posts = updatedArray;
+  return stateClone; 
+}

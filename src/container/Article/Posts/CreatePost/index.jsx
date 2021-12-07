@@ -1,10 +1,11 @@
 import React from "react";
-import Title from "./Title";
+import Post from "./Post";
+import style from './style.module.css';
 
 export const CreatePost = () => {
   return (
-    <div class="className">
-      <Title />
+    <div className={style.Post}>
+      <Post />
     </div>
   );
 };

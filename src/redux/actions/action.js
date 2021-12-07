@@ -38,3 +38,14 @@ export const getPost = (post) => {
     }); 
   }
 }
+export const deletePost = (id) => {
+  return async (dispatch) => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,{
+      method: "DELETE"
+    })
+    dispatch({
+      type:"DELETE_POST",
+      payload:id,
+    })
+  }  
+}

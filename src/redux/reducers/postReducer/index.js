@@ -1,7 +1,7 @@
 import { getPost } from "./producer"
 
 const initialState = {
-    post:[{title:null}],
+    post:[{title:""}],
 }
 
 const postReducer = (state = initialState,action) => {
