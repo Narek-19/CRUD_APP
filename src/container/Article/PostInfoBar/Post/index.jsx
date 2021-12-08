@@ -23,9 +23,8 @@ const Post = (props) => {
     setPost(e.target.value);
     setTime(
       setTimeout(() => {
-        console.log(editPost(e.target.value,post[0].id));
-        console.log(e.target.value,post[0].id);
-        
+        console.log(editPost(e.target.value, post[0].id));
+        console.log(e.target.value, post[0].id);
       }, 2000)
     );
   };
@@ -38,7 +37,7 @@ const Post = (props) => {
         value={postValue}
         onChange={updatePost}
       ></textarea>
-      <DeletePost postId={post[0].id} />
+      <DeletePost postId={post[0].id} textarea={textAreaRef}/>
       <EditPost textarea={textAreaRef} />
     </div>
   );

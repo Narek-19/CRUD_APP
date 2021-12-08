@@ -1,5 +1,13 @@
 .Footer{
+    text-align: center;
+    font-weight: bold;
     width:100%;
     height:100px;
     background: linear-gradient(180deg, rgba(249,243,223,1) 14%, rgba(205,242,202,0.8687850140056023) 48%, rgba(205,242,202,1) 100%);
+}
+.Footer img {
+    width: 12px;
+}
+.Footer a img{
+    width:70px;
 }

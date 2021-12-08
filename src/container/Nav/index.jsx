@@ -4,7 +4,8 @@ import style from './style.module.css';
 export const Nav = () => {
     return(
         <div className = {style.Nav}>
-            <p>Nav</p>
+            <img src = "./images/logo.png"/>
+            
         </div>
     )
 }

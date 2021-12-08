@@ -9,8 +9,6 @@ export const PostInfoBar = () => {
     return postReducer.post[0].title;
   });
 
-  console.log(currentPost);
-
   return (
     <div className={style.PostInfoBar}>
       <h1>Post</h1>
