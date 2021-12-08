@@ -1,3 +1,4 @@
+import { editPost } from "./producer";
 import { deletePost } from "./producer";
 import { createPost } from "./producer";
 import { getPosts } from "./producer";
@@ -17,6 +18,8 @@ const project = (state = initialState, action) => {
       return createPost(state,action);
     case "DELETE_POST":
       return deletePost(state,action);
+    case "EDIT_POST":
+      return editPost(state,action);
     default:
       return state;
   }
